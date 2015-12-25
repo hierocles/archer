@@ -1,0 +1,24 @@
+extends layouts/default
+
+block content
+  .row
+    .left-pane.col-md-6
+      h2 Left Pane
+      p.
+        This side will contain instructions for use and form inputs:
+      ul
+        li Account input
+        li Key input
+        li Go button
+
+      p.
+        Once entered, the form will disappear, and a field of buttons will appear.
+      p.
+        Upon clicking a button, the endorsement CGI page will be called in the right pane iframe.
+      p.
+        After clicking the button, the button will be removed.
+
+    .rigt-pane.col-md-6
+      h2 Right Pane
+      p.
+        This side will contain an iframe to the NationStates website.
