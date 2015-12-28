@@ -16,7 +16,7 @@
     "gulp-imagemin": "^2.2.1",
     "gulp-jade": "^1.1.0",
     "gulp-load-plugins": "^0.10.0",
-    "gulp-minify-css": "^1.1.1",
+    "gulp-minify-css": "^1.2.3",
     "gulp-minify-html": "^1.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.0.0",
@@ -31,7 +31,8 @@
   "eslintConfig": {
     "env": {
       "node": true,
-      "browser": true
+      "browser": true,
+      "jquery": true
     },
     "rules": {
       "quotes": [

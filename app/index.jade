@@ -3,22 +3,47 @@ extends layouts/default
 block content
   .row
     .left-pane.col-md-6
-      h2 Left Pane
-      p.
-        This side will contain instructions for use and form inputs:
-      ul
-        li Account input
-        li Key input
-        li Go button
+      div#step_one
+        h3 Step One
+        p.
+          First, we need your nation name to continue. Enter it into the box and hit Next. Note that this #[em must] be in the nation you are logged into on NationStates.
 
-      p.
-        Once entered, the form will disappear, and a field of buttons will appear.
-      p.
-        Upon clicking a button, the endorsement CGI page will be called in the right pane iframe.
-      p.
-        After clicking the button, the button will be removed.
+        form.form-horizontal(id='set_nation')
+          fieldset
+            // Text input
+            .form-group
+              label.col-md-4.control-label(for='nation_name') Nation
+              .col-md-6
+                input#nation_name.form-control.input-md(name='nation_name', type='text')
+            .form-group
+              .col-md-4.col-md-offset-4
+                button#next.btn.btn-primary(type='submit') Next
 
-    .rigt-pane.col-md-6
-      h2 Right Pane
-      p.
-        This side will contain an iframe to the NationStates website.
+      div#step_two
+        h3 Step Two
+        p.
+          Now we need to find your Local ID. In the frame to the right, you should see your Settings page. Right click and view the #[em frame] source. Copy and paste the code into the box below and hit Start.
+        p If you're having trouble getting the #[em frame] source, click #[a(href='http://www.nationstates.net/page=settings', target='_blank') here] to open the Settings page in a new window.
+
+        form.form-horizontal(id='find_localid')
+          fieldset
+            .form-group
+              label.col-md-4.control-label(for='localid_html') Enter HTML
+              .col-md-6
+                textarea#localid_html.form-control(rows='5')
+            .form-group
+              .col-md-4.col-md-offset-4
+                button#start.btn.btn-primary(type='submit') Start
+
+      div#step_three
+        h3 Step Three
+        p Click a nation to endorse it. Their nation page should appear to the right, indicating successful endorsement. To ensure success, wait until the frame loads the page before continuing.
+
+        form.form-inline(id='nation_list')
+          fieldset
+            .form-group(id='nation_buttons_field')
+
+
+    .right-pane.col-md-6
+      div.embed-responsive.embed-responsive-4by3
+        iframe(id='nsframe').embed-responsive Sorry, Archer needs frame support to work. Please enable frame support or use another brower.

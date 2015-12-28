@@ -2,6 +2,7 @@
   "name": "archer",
   "private": true,
   "dependencies": {
+    "Bootflat": "git://github.com/bootflat/bootflat.github.io.git#~2.0.4",
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1"
   },
