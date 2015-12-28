@@ -8,4 +8,4 @@
 __Archer__ can run on any host or even locally. Grab all files in the `` dist `` directory and point your browser to `` index.html ``. Your browser must have iframe and Javascript support enabled.
 
 ## License
-[GLP v3](LICENSE)
+[GPL v3](LICENSE)
