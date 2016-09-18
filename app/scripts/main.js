@@ -6,7 +6,8 @@ $(function(){
 	function populate() {
 		$.getJSON('https://nationstatesplusplus.net/api/nation/missingendo/?fullData=false&name=' + useNation, function(data) {
 				$.each(data, function(key, val) {
-					$('#nation_buttons_field').append('<button name="nation-button" type="button" class="btn btn-primary" style="margin: 5px" data-nation="' + val + '">' + val + '</button>');
+					var nDataName = val.replace(/ /g, '_');
+					$('#nation_buttons_field').append('<button name="nation-button" type="button" class="btn btn-primary" style="margin: 5px" data-nation="' + nDataName + '">' + val + '</button>');
 				});
 			}
 		);
